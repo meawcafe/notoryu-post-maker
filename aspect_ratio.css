@@ -1,0 +1,41 @@
+/* ar = aspect ratio */
+
+.ar-item-button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.ar-item-button input[type="radio"] {
+  cursor: pointer;
+  position: absolute;
+  height: 0;
+  width: 0;
+}
+
+.ar-item-checkmark {
+  width: 3.6rem;
+  height: 3rem;
+  padding: 0.6rem 0;
+  text-align: center;
+
+  background-color: var(--main-color8);
+  border-radius: 0.55rem;
+
+  border: 0.2rem solid var(--main-color7);
+  box-shadow: 0 0.5rem 0 0.0 var(--main-color7);
+
+  font-size: 0.8rem;
+  font-weight: 600;
+  position: relative;
+  top: -0.5rem;
+}
+
+.ar-item-checkmark span {
+  color: var(--main-color5);
+}
+
+.ar-item-button input[type="radio"]:checked ~ .ar-item-checkmark {
+  top: 0;
+  box-shadow: 0 0 0 0.0 var(--main-color5);
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>notoryu - gerador de postagens</title>
+  <link rel="icon" type="image/png" href="./notoryu_logo.svg"/>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Spartan:wght@200;400;600&display=swap" rel="stylesheet"> -->
+
+  <!-- local css -->
+  <link rel="stylesheet" href="./root.css">
+
+  <!-- jquery cdn -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</head>
+<body>
+
+  <span id="small-screen">Este website não funciona numa tela tão pequena</span>
+
+  <div class="app-grid">
+
+    <div id="data-container">
+
+      <main id="html2canvas-root">
+        <div class="root-content">
+          
+          <span id="root-title">
+            <div class="root-text"><b>texto principal</b><br>o HTML é renderizado! ✨</div>
+          </span>
+
+          <div id="root-background-image">
+            <span id="root-info">
+              <div class="root-text"><b>eu amo o frio</b></div>
+            </span>
+          </div>
+
+        </div>
+      </main>
+
+    </div>
+
+
+
+    <div id="config-container">
+
+      <div class="main-buttons">
+        <input type="button" onclick="CanvasRoot.center()" value="centralizar">
+        <input type="button" id="save-html2canvas" onclick="CanvasRoot.capture()" value="salvar">
+      </div>
+
+      <div class="config-item">
+        <span class="item-title">ampliação</span>
+        <div class="item-content">
+          <input style="width: 100%;" type="range" name="root-zoom" min="20" max="100" oninput="CanvasRoot.updateZoom(this.value);">
+        </div>
+      </div>
+      
+      <div class="config-item">
+        <span class="item-title">
+          proporção da imagem
+        </span>
+        <div class="item-content">
+
+          <label class="ar-item-button">
+            <input type="radio" value="1/1" checked name="aspect-ratio-choice">
+            <div class="ar-item-checkmark">
+              <span>
+                1:1
+              </span>
+            </div>
+          </label>
+
+          <label class="ar-item-button">
+            <input type="radio" value="4/5" name="aspect-ratio-choice">
+            <div class="ar-item-checkmark">
+              <span>
+                4:5
+              </span>
+            </div>
+          </label>
+
+          <label class="ar-item-button">
+            <input type="radio" value="16/9" name="aspect-ratio-choice">
+            <div class="ar-item-checkmark">
+              <span>
+                16:9
+              </span>
+            </div>
+          </label>
+        </div>
+      </div>
+
+
+      <div class="config-item">
+
+        <span class="item-title">
+          plano de fundo
+        </span>
+        <div class="item-content">
+          
+          <label class="data-background-item">
+            <input type="file" accept="image/*" id="data-background-image" onchange="CanvasRoot.changeRootBackground(this)">
+          </label>
+
+          <div class="data-background-position">
+
+            <div class="background-position-item">
+              <input type="radio" value="top left" name="background-position-choice">
+              <input type="radio" value="top center" name="background-position-choice">
+              <input type="radio" value="top right" name="background-position-choice">
+            </div>
+            
+            <div class="background-position-item">
+              <input type="radio" value="center left" name="background-position-choice">
+              <input type="radio" value="center center" checked name="background-position-choice">
+              <input type="radio" value="center right" name="background-position-choice">
+            </div>
+            
+            <div class="background-position-item">
+              <input type="radio" value="bottom left" name="background-position-choice">
+              <input type="radio" value="bottom center" name="background-position-choice">
+              <input type="radio" value="bottom right" name="background-position-choice">
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="config-item">
+        <span class="item-title">
+          texto principal
+        </span>
+        <div class="item-content">
+          <textarea data-root="0"><b>texto principal</b><br>o HTML é renderizado! ✨</div></textarea>
+        </div>
+      </div>
+
+      <div class="config-item">
+        <span class="item-title">
+          descrição da postagem
+        </span>
+        <div class="item-content">
+          <textarea data-root="1"><b>eu amo o frio</b></textarea>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <!-- local js -->
+  <script src="./canvasRoot.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+.data-background-item {
+  background: url('./add_image.svg') no-repeat center center;
+
+  width: 9.5rem;
+  height: 9.5rem;
+
+  border: 0.3rem dashed var(--main-color5);
+
+  border-radius: 0.4rem;
+  display: flex;
+  transition: opacity 200ms ease;
+
+  opacity: 0.6;
+}
+
+.data-background-item:hover {
+  opacity: 1;
+}
+
+#data-background-image {
+  left: 0;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+
+/* position */
+.data-background-position {
+  width: 9.5rem;
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.background-position-item {
+  /* width: 9.5rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.background-position-item input {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 0.4rem;
+  background-color: var(--main-color3);
+}
