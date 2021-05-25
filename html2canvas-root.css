@@ -119,6 +119,7 @@
   height: 100%;
 
   background-position: center center;
+  transition: background-position 1s ease;
   border-radius: 2rem;
 }
 
