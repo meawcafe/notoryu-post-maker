@@ -8,6 +8,6 @@
 ### English
 **A simple social media post creator. Created to meet the needs of a college assignment**, where it will be possible to create posts simply and quickly, always maintaining a standard. You may **experience problems**. I recommend using [Google Ghrome](https://www.google.com/chrome/) `v90.0.4430.212`;
 
-**Aavailable in Portuguese**;
+**Available in Portuguese**;
 
 <h5> I'm a beginner developer.</h5>
