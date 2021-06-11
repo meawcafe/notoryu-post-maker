@@ -91,7 +91,7 @@ textarea {
 
   color: var(--main-color9);
 
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 0.4rem;
 }
 
@@ -122,6 +122,24 @@ input {
   font-family: var(--lato-font);
   font-weight: 400;
   font-size: 1rem;
+}
+
+button {
+  width: 1.5rem; 
+  border-radius: 0.2rem;
+  background-color: var(--main-color8);
+  font-size: 1.4rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button:active {
+  position: relative;
+  top: 0.2rem;
 }
 
 #small-screen {

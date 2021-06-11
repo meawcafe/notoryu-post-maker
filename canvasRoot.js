@@ -33,6 +33,46 @@ class Html2canvasRoot {
       .css('left', ((parseFloat($('#data-container').css('width')) / 2) - (parseFloat(this.root.css('width')) / 2)))
   }
 
+  textIncrement(stringElem, size = 0) {
+    const elem = document.querySelectorAll(stringElem)[0] 
+    const elemFontSize = parseFloat(window.getComputedStyle(elem).fontSize)
+    
+
+    if (size) {
+      elem.style.fontSize = (elemFontSize + size) + "px"
+    } else {
+      elem.style.fontSize = (elemFontSize + 1)+ "px"
+    }
+  }
+
+  textDecrement(stringElem, size = 0) {
+    const elem = document.querySelectorAll(stringElem)[0] 
+    const elemFontSize = parseFloat(window.getComputedStyle(elem).fontSize)
+    
+
+    if (size) {
+      elem.style.fontSize = (elemFontSize - size) + "px"
+    } else {
+      elem.style.fontSize = (elemFontSize - 1) + "px"
+    }
+  }
+
+  formatText(textarea_target, text_target, char){
+    const textarea_elem = $(textarea_target)
+    const text_elem = $(text_target)
+
+    const main_string = textarea_elem.val()
+
+    const str1 = main_string.slice(0, textarea_elem.get(0).selectionStart)
+    const str2 = main_string.slice(textarea_elem.get(0).selectionEnd)
+    const selectedStr = main_string.slice(textarea_elem.get(0).selectionStart, textarea_elem.get(0).selectionEnd)
+
+    textarea_elem.val(str1 + (`<${char}>` + selectedStr + `</${char}>`) + str2)
+    text_elem.html(str1 + (`<${char}>` + selectedStr + `</${char}>`) + str2)
+    
+    CanvasRoot.updateRootTitleSize()
+  }
+
   updateZoom(zoom_value) {
     this.root.css('transform', `scale(${zoom_value/100})`)
   }
@@ -110,7 +150,6 @@ window.onload = function() {
 
       if (!$(this).data('root')) {
         $('#root-title div').css('font-size', '4rem')
-        console.log('asd')
         CanvasRoot.updateRootTitleSize()
       }
     })
@@ -134,6 +173,5 @@ window.onload = function() {
         CanvasRoot.updateRootTitleSize()
       }, 500)
     })
-
   //
 }

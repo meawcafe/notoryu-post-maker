@@ -10,6 +10,11 @@
   text-align: center;
   background-color: var(--main-color3);
   padding: 1rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   
   border-radius: 0.4rem 0.4rem 0 0;
 }

@@ -33,12 +33,12 @@
         <div class="root-content">
           
           <span id="root-title">
-            <div class="root-text"><b>texto principal</b><br>o HTML é renderizado! ✨</div>
+            <div class="root-text">o HTML é <b>renderizado!</b> ✨</div>
           </span>
 
           <div id="root-background-image">
             <span id="root-info">
-              <div class="root-text"><b>eu amo o frio</b></div>
+              <div class="root-text">Se interessou? Confira esta e outras postagens em nosso blog!</div>
             </span>
           </div>
 
@@ -46,7 +46,6 @@
       </main>
 
     </div>
-
 
 
     <div id="config-container">
@@ -138,19 +137,25 @@
 
       <div class="config-item">
         <span class="item-title">
+          <button onclick="CanvasRoot.formatText('#textarea-title', '#root-title .root-text', 'b')">b</button>
           texto principal
+          <button onclick="CanvasRoot.formatText('#textarea-title', '#root-title .root-text', 'i')">i</button>
         </span>
         <div class="item-content">
-          <textarea data-root="0"><b>texto principal</b><br>o HTML é renderizado! ✨</div></textarea>
+          <textarea data-root="0" id="textarea-title">o HTML é <b>renderizado!</b> ✨</textarea>
         </div>
       </div>
 
       <div class="config-item">
         <span class="item-title">
+          <button onclick="CanvasRoot.formatText('#textarea-description', '#root-info .root-text', 'b')">b</button>
+          <button onclick="CanvasRoot.formatText('#textarea-description', '#root-info .root-text', 'i')">i</button>
           descrição da postagem
+          <button onclick="CanvasRoot.textIncrement('#root-info .root-text')">+</button>
+          <button onclick="CanvasRoot.textDecrement('#root-info .root-text')">-</button>
         </span>
         <div class="item-content">
-          <textarea data-root="1"><b>eu amo o frio</b></textarea>
+          <textarea data-root="1" id="textarea-description">Se interessou? Confira esta e outras postagens em nosso blog!</textarea>
         </div>
       </div>
       
