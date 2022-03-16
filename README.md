@@ -1,6 +1,6 @@
-[<h1 style="font-size: 3rem; text-align: center;">Criador de postagens</h1>](https://meawto.github.io/notoryu-post-maker)
+[<h1 style="font-size: 3rem; text-align: center;">Criador de postagens</h1>](https://meawcafe.github.io/notoryu-post-maker)
 
-[<img alt="post maker preview" src="https://i.imgur.com/1iDqv1I.png" style="border-radius: 0.8rem; display: block; margin: 0 auto; margin-bottom: 6rem">](https://meawto.github.io/notoryu-post-maker)
+[<img alt="post maker preview" src="https://i.imgur.com/1iDqv1I.png" style="border-radius: 0.8rem; display: block; margin: 0 auto; margin-bottom: 6rem">](https://meawcafe.github.io/notoryu-post-maker)
 
 ### Português
 **Um simples criador de postagens para redes sociais. Inteiramente pensado em suprir as necessidades de um trabalho da faculdade**, onde será possível criar postagens de forma simples e rápida, mantendo sempre um padrão. É possível que você passe por **problemas de instabilidades** e por isso recomendo o uso do [Google Chrome](https://www.google.com/chrome/) `v90.0.4430.212`;
