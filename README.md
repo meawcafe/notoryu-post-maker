@@ -1,4 +1,4 @@
-[<h1 style="font-size: 3rem; text-align: center;">Criador de postagens</h1>](https://meawcafe.github.io/notoryu-post-maker)
+[Criador de postagens](https://meawcafe.github.io/notoryu-post-maker)
 
 [<img alt="post maker preview" src="https://i.imgur.com/1iDqv1I.png" style="border-radius: 0.8rem; display: block; margin: 0 auto; margin-bottom: 6rem">](https://meawcafe.github.io/notoryu-post-maker)
 
